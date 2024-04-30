@@ -55,14 +55,16 @@ function searchingForCity(event) {
 
   searchCity(searchInput.value);
 }
-let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", searchingForCity);
 
-searchCity("London");
-
-let forecast = document.querySelector("#weather-forecast");
-forecast.innerHTML = `<div class="weather-forecast-day>
-              <div class="weather-forecast-date">Thu</div>
+function displayForecast() {
+  let forecast = document.querySelector("#weather-forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+              <div class="weather-forecast-date">${day}</div>
               <div>
                 <img
                   src="https://openweathermap.org/img/wn/10d@2x.png"
@@ -71,5 +73,13 @@ forecast.innerHTML = `<div class="weather-forecast-day>
                 />
               </div>
               <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temp-max">20&deg</span>
-                <span class="weather-forecast-temp-min">15&deg</span></div></div></div>`;
+                <span class="weather-forecast-temp-max"><strong>20&deg</strong></span>
+                <span class="weather-forecast-temp-min">15&deg</span></div></div>`;
+  });
+  forecast.innerHTML = forecastHtml;
+}
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", searchingForCity);
+
+searchCity("London");
+displayForecast();

@@ -82,6 +82,8 @@ a {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 .weather-forecast-date {
   font-size: 16px;
