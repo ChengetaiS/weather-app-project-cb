@@ -90,6 +90,9 @@ a {
   color: white;
   opacity: 0.7;
 }
+.weather-forecast-icon {
+  width: 100%;
+}
 .weather-forecast-temperature {
   font-size: 13px;
   color: white;
