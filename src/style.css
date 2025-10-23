@@ -1,11 +1,14 @@
 body {
   font-family: Lora;
+  background: linear-gradient(#17152c, #21155d, #73557d, #7341d6, #010101);
 }
 .container {
   max-width: 600px;
-  background: linear-gradient(#17152c, #6330dd, #010101);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("../images/Lucid_Origin_Generate_an_image_of_a_city_and_a_thunderstorm_in_0.jpg");
+  background-repeat: no-repeat;
   margin: 45px auto;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.9);
   border-radius: 16px;
   padding: 30px;
 }
@@ -19,17 +22,23 @@ header {
   border-radius: 6px;
   width: 80%;
   font-size: 16px;
-  padding: 15px 20px;
+  font-weight: 700;
+  padding: 10px 10px;
 }
 .search-input-button {
-  background: #6330dd;
-  padding: 15px 30px;
+  background: #7341d6;
+  padding: 10px 10px;
   border: none;
-  font-size: 16px;
+  font-size: 17px;
+  text-transform: uppercase;
   margin-left: 5px;
   border-radius: 6px;
   color: white;
 }
+.search-input-button:hover {
+  cursor: pointer;
+}
+
 main {
   padding: 30px 0;
 }
