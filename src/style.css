@@ -109,3 +109,17 @@ a {
 .weather-forecast-temp-min {
   opacity: 0.7;
 }
+
+@media (max-width: 900px) {
+  .search-input {
+    width: 70%;
+  }
+
+  .actual-temperature {
+    font-size: 70px;
+  }
+
+  .search-input-button {
+    font-size: 14px;
+  }
+}
